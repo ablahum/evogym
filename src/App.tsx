@@ -1,4 +1,4 @@
-import Navbar from '@/scenes/Navbar'
+import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 import { SelectedPage } from './shared/types'
 
