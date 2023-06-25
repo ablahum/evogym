@@ -17,8 +17,13 @@ function App() {
     }
 
     window.addEventListener('scroll', handleScroll)
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    console.log(selectedPage)
+  }, [selectedPage])
 
   return (
     <div className='app bg-gray-20'>
