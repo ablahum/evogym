@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 import { SelectedPage } from './shared/types'
 import Header from './components/Header'
+import Benefits from './components/Benefits'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Header)
@@ -35,6 +36,7 @@ function App() {
       />
 
       <Header setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
     </div>
   )
 }
