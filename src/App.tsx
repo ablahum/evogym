@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { SelectedPage } from './shared/types'
 import Header from './components/Header'
 import Benefits from './components/Benefits'
+import OurClasses from '@/components/OurClasses'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Header)
@@ -37,6 +38,7 @@ function App() {
 
       <Header setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
+      <OurClasses setSelectedPage={setSelectedPage} />
     </div>
   )
 }
