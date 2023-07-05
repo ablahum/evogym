@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useMediaQuery } from '@/hooks'
 import { SelectedPage } from '@/shared/types'
 import ActionButton from '@/shared/ActionButton'
