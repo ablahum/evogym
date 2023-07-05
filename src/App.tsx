@@ -1,9 +1,6 @@
-import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 import { SelectedPage } from './shared/types'
-import Header from './components/Header'
-import Benefits from './components/Benefits'
-import OurClasses from '@/components/OurClasses'
+import { Header, Navbar, Benefits, OurClasses, ContactUs, Footer } from '@/components'
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Header)
@@ -24,10 +21,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // useEffect(() => {
-  //   console.log(selectedPage)
-  // }, [selectedPage])
-
   return (
     <div className='app bg-gray-20'>
       <Navbar
@@ -39,6 +32,8 @@ function App() {
       <Header setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   )
 }
