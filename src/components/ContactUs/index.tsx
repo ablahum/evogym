@@ -27,7 +27,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
       id='contactus'
       className='mx-auto w-5/6 pt-24 pb-32'
     >
-      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
+      <motion.div
+        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+      >
         <motion.div
           className='md:w-3/5'
           initial='hidden'
@@ -43,7 +45,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <span className='text-primary-500'>JOIN NOW</span> TO GET IN SHAPE
           </HText>
 
-          <p className='my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni asperiores tenetur molestias adipisci. Ut aliquid itaque tempore expedita doloremque!</p>
+          <p className='my-5'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni
+            asperiores tenetur molestias adipisci. Ut aliquid itaque tempore
+            expedita doloremque!
+          </p>
         </motion.div>
 
         <div className='mt-10 justify-between gap-8 md:flex'>
@@ -76,7 +82,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               {errors.name && (
                 <p className='mt-1 text-primary-500'>
                   {errors.name.type === 'required' && 'This field is required!'}
-                  {errors.name.type === 'maxLength' && 'Max length is 100 characters!'}
+                  {errors.name.type === 'maxLength' &&
+                    'Max length is 100 characters!'}
                 </p>
               )}
 
@@ -91,7 +98,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               />
               {errors.email && (
                 <p className='mt-1 text-primary-500'>
-                  {errors.email.type === 'required' && 'This field is required!'}
+                  {errors.email.type === 'required' &&
+                    'This field is required!'}
                   {errors.email.type === 'pattern' && 'Invalid email address!'}
                 </p>
               )}
@@ -99,7 +107,6 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               <textarea
                 rows={4}
                 cols={50}
-                type='text'
                 className={inputStyles}
                 placeholder='MESSAGE'
                 {...register('message', {
@@ -109,8 +116,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               />
               {errors.message && (
                 <p className='mt-1 text-primary-500'>
-                  {errors.message.type === 'required' && 'This field is required!'}
-                  {errors.message.type === 'maxLength' && 'Max length is 2000 characters!'}
+                  {errors.message.type === 'required' &&
+                    'This field is required!'}
+                  {errors.message.type === 'maxLength' &&
+                    'Max length is 2000 characters!'}
                 </p>
               )}
 
